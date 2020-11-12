@@ -28,3 +28,9 @@ const elem1 = document.querySelector('.task1__example');
 const elem1Val = elem1.textContent;
 console.log("Task 1: ", elem1Val.match(regexp1));
 
+
+const regexp2 = /#[\da-z]{6}\b/gi;
+const elem2 = document.querySelector('.task2__example');
+const elem2Val = elem2.textContent;
+console.log("Task 2: ", elem2Val.match(regexp2));
+
