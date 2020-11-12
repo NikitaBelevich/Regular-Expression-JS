@@ -6,3 +6,8 @@ body {
   margin: 15px;
   background-color: #e4e4e4;
 }
+
+.found-matches {
+  display: inline-block;
+  background-color: #feff31;
+}
