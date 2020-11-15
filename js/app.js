@@ -34,3 +34,13 @@ const elem2 = document.querySelector('.task2__example');
 const elem2Val = elem2.textContent;
 console.log("Task 2: ", elem2Val.match(regexp2));
 
+// Task 3
+
+
+const btn3 = document.querySelector('.task3-btn');
+btn3.addEventListener('click', () => {
+    const regexp3 = /a[^a]*?a/g;
+    const elem3 = document.querySelector('.task3__example');
+    const elem3Val = elem3.textContent;
+    elem3.textContent = elem3Val.replace(regexp3, '!');
+}, {once: true});
