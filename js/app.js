@@ -26,3 +26,13 @@ btn3.addEventListener('click', () => {
     const elem3Val = elem3.textContent;
     elem3.textContent = elem3Val.replace(regexp3, '!');
 }, {once: true});
+
+// Task 3
+const btn4 = document.querySelector('.task4-btn');
+btn4.addEventListener('click', () => {
+    const regexp4 = /<[^<>]+>/g;
+    const elem4 = document.querySelector('.task4__example').firstElementChild;
+    const elem4Val = elem4.textContent;
+    const newRes = elem4Val.match(regexp4);
+    elem4.insertAdjacentHTML('afterend', `<xmp>${newRes}</xmp>`);
+}, {once: true});
