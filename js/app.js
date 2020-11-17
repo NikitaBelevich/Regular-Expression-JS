@@ -55,4 +55,10 @@ btn6.addEventListener('click', () => {
     findMatchInTheNode(regexp6, elem6);
 }, {once: true});
 
-
+// Task 7
+const btn7 = document.querySelector('.task7-btn');
+btn7.addEventListener('click', () => {
+    const regexp7 = /-?\d+(\.\d+)?/g;
+    const elem7 = document.querySelector('.task7__example');
+    findMatchInTheNode(regexp7, elem7);
+}, {once: true});
