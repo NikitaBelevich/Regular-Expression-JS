@@ -47,3 +47,12 @@ btn5.addEventListener('click', () => {
 }, {once: true});
 
 
+// Task 6
+const btn6 = document.querySelector('.task6-btn');
+btn6.addEventListener('click', () => {
+    const regexp6 = /#([a-z\d]{3}){1,2}\b/gi;
+    const elem6 = document.querySelector('.task6__example');
+    findMatchInTheNode(regexp6, elem6);
+}, {once: true});
+
+
