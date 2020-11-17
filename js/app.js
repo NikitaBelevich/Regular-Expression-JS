@@ -36,3 +36,14 @@ btn4.addEventListener('click', () => {
     const newRes = elem4Val.match(regexp4);
     elem4.insertAdjacentHTML('afterend', `<xmp>${newRes}</xmp>`);
 }, {once: true});
+
+const btn5 = document.querySelector('.task5-btn');
+btn5.addEventListener('click', () => {
+    const regexp5 = /[a-z\d_]+\.[a-z]{2,}/g;
+    const elem5 = document.querySelector('.task5__example');
+    const elem5Val = elem5.textContent;
+    const newRes = elem5Val.replace(regexp5, `<a href="http://$&">$&</a>`);
+    elem5.textContent = newRes;
+}, {once: true});
+
+
