@@ -62,3 +62,24 @@ btn7.addEventListener('click', () => {
     const elem7 = document.querySelector('.task7__example');
     findMatchInTheNode(regexp7, elem7);
 }, {once: true});
+
+// Task 8
+const out8 = document.querySelector('.task8__output');
+const btn8 = document.querySelector('.task8-btn');
+btn8.addEventListener('click', () => {
+    const checkedExpression = document.querySelector('.select-expression .input-expression:checked').value;
+    let [val1, op, val2] = parse(checkedExpression);
+    out8.innerHTML = `
+                    Операнд 1: <b>${val1}</b> <br>
+                    Оператор: <b>${op}</b> <br>
+                    Операнд 2: <b>${val2}</b>
+                    `;
+});
+
+
+function parse(expression) {
+    const regexp = /(-?\d+(?:\.\d+)?) ?([+*-/]) ?(-?\d+(?:\.\d+)?)/;
+    let matches = expression.match(regexp);
+    const splitExpression = [matches[1], matches[2], matches[3]];
+    return splitExpression;
+}

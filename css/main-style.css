@@ -7,3 +7,7 @@ body {
   display: inline-block;
   background-color: #feff31;
 }
+
+.select-expression {
+  margin: 15px 0;
+}
