@@ -83,3 +83,12 @@ function parse(expression) {
     const splitExpression = [matches[1], matches[2], matches[3]];
     return splitExpression;
 }
+
+
+// Task 9
+const btn9 = document.querySelector('.task9-btn');
+btn9.addEventListener('click', () => {
+    const regexp = /([\da-f]{2}:){5}[\da-f]{2}/gi;
+    const elem = document.querySelector('.task9__example');
+    findMatchInTheNode(regexp, elem);
+}, {once: true});
