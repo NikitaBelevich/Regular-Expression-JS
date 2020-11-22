@@ -92,3 +92,11 @@ btn9.addEventListener('click', () => {
     const elem = document.querySelector('.task9__example');
     findMatchInTheNode(regexp, elem);
 }, {once: true});
+
+// Task 10
+const btn10 = document.querySelector('.task10-btn');
+btn10.addEventListener('click', () => {
+    const regexp = /(Java(Script)?)|(PHP)|(C(\+\+)?)/g;
+    const elem = document.querySelector('.task10__example');
+    findMatchInTheNode(regexp, elem);
+}, {once: true});
