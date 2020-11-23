@@ -100,3 +100,11 @@ btn10.addEventListener('click', () => {
     const elem = document.querySelector('.task10__example');
     findMatchInTheNode(regexp, elem);
 }, {once: true});
+
+// Task 11
+const btn11 = document.querySelector('.task11-btn');
+btn11.addEventListener('click', () => {
+    const regexp = /\b(?<!-)\d+\b/g;
+    const elem = document.querySelector('.task11__example');
+    findMatchInTheNode(regexp, elem);
+}, {once: true});
