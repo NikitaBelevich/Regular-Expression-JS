@@ -122,3 +122,16 @@ btn12.addEventListener('click', () => {
     });
     elem.textContent = newstr;
 }, {once: true});
+
+// Task 13
+const btn13 = document.querySelector('.task13-btn');
+btn13.addEventListener('click', () => {
+    const regexp = /\d+/g;
+    const elem = document.querySelector('.task13__example');
+    let str = elem.textContent.trim();
+
+    let newstr = str.replace(regexp, (match) => {
+        return match.split('').reverse().join('');
+    });
+    elem.textContent = newstr;
+}, {once: true});
