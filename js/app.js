@@ -135,3 +135,17 @@ btn13.addEventListener('click', () => {
     });
     elem.textContent = newstr;
 }, {once: true});
+
+
+// Task 14
+const btn14 = document.querySelector('.task14-btn');
+btn14.addEventListener('click', () => {
+    const regexp = /(?:(\d{1,2})\.){2}\d{4}/g;
+    const elem = document.querySelector('.task14__example');
+    let str = elem.textContent.trim();
+
+    let newstr = str.replace(regexp, (match) => {
+        return match.split('.').reverse().join('-');
+    });
+    elem.textContent = newstr;
+}, {once: true});
