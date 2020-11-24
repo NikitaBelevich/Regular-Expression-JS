@@ -108,3 +108,17 @@ btn11.addEventListener('click', () => {
     const elem = document.querySelector('.task11__example');
     findMatchInTheNode(regexp, elem);
 }, {once: true});
+
+
+const btn12 = document.querySelector('.task12-btn');
+btn12.addEventListener('click', () => {
+    const regexp = /\[(\d+)\]/g;
+    const elem = document.querySelector('.task12__example');
+    let str = elem.textContent.trim();
+
+    let newstr = str.replace(regexp, (match, p1) => {
+        let newNumber = +p1 + +p1 + +p1;
+        return `[${newNumber}]`;
+    });
+    elem.textContent = newstr;
+}, {once: true});
